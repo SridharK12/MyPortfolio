@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.level4env/
+
+#Vector store, chunks
+.docs/
+
+
+#images
+.images/
