@@ -1,0 +1,3 @@
+[console_scripts]
+azmlinfsrv = azureml_inference_server_http.amlserver:run
+

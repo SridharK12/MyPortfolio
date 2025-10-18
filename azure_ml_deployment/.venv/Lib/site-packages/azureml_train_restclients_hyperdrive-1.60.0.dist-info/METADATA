@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: azureml-train-restclients-hyperdrive
+Version: 1.60.0
+Summary: Contains classes needed to create HyperDriveRuns with azureml-train-core.
+Home-page: https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Keywords: Swagger,HyperDrive
+Requires-Python: >=3.7,<4
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: requests>=2.19.1
+Requires-Dist: msrest>=0.5.1
+Requires-Dist: msrestazure>=0.4.33
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+The azureml-train-restclients-hyperdrive contains classes needed to create HyperDriveRuns with azureml-train-core.
+
+*****************
+Setup
+*****************
+
+Follow these `instructions <https://docs.microsoft.com/azure/machine-learning/how-to-configure-environment#local>`_ to install the Azure ML SDK on your local machine, create an Azure ML workspace, and set up your notebook environment, which is required for the next step.
+Once you have set up your environment, install the AzureML train rest clients hyperdrive package:
+.. code-block:: python
+pip install azureml-train-restclients-hyperdrive
+

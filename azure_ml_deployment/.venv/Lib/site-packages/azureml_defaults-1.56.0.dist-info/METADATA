@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: azureml-defaults
+Version: 1.56.0
+Summary: Is a metapackage that is used internally by Azure Machine Learning
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: azureml-inference-server-http ~=1.0.0
+Requires-Dist: azureml-core ~=1.56.0
+Requires-Dist: azureml-dataset-runtime[fuse] ~=1.56.0
+Provides-Extra: async
+Requires-Dist: quart <=0.13.1 ; extra == 'async'
+Requires-Dist: uvicorn ==0.12.3 ; extra == 'async'
+Requires-Dist: uvloop ==0.14.0 ; extra == 'async'
+Requires-Dist: httptools ==0.1.1 ; extra == 'async'
+
+The azureml-defaults is a metapackage that is used internally by Azure Machine Learning.
+

@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: inference-schema
+Version: 1.7.2
+Summary: This package is intended to provide a uniform schema for common machine learning applications, as well as a set of decorators that can be used to aid in web based ML prediction applications.
+Author: Microsoft Corp
+License: MIT License        
+            Copyright (c) Microsoft Corporation. All rights reserved.        
+            Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:        
+            The above copyright notice and this permission notice shall be included in all
+            copies or substantial portions of the Software.        
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+            SOFTWARE        
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8,<3.12
+License-File: LICENSE.txt
+Requires-Dist: python-dateutil (>=2.5.3)
+Requires-Dist: pytz (>=2017.2)
+Requires-Dist: wrapt (<=1.16.0,>=1.14.0)
+Provides-Extra: numpy-support
+Requires-Dist: numpy (>=1.13.0) ; extra == 'numpy-support'
+Provides-Extra: pandas-support
+Requires-Dist: pandas (>=0.20.2) ; extra == 'pandas-support'
+Provides-Extra: pyspark-support
+Requires-Dist: pyspark (>=2.3.2) ; extra == 'pyspark-support'
+
