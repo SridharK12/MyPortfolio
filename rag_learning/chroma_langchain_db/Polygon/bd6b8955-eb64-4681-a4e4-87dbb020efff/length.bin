@@ -1,0 +1,3 @@
+invalid type: string "The best sci-fi and fantasy books of 2023\nIt’s been a stellar year in speculative fiction\n\nBy Nicole Clark, Sadie Gennis, and Polygon Staff  Updated Dec 8, 2023, 10:00am EST  34 Comments / 34 New\nIf you buy something from a Polygon link, Vox Media may earn a commission. See our ethics statement.\n\nNTEGER;
+ALTER TABLE segment_metadata ADD COLUMN bool_value INTEGER;
+rius
