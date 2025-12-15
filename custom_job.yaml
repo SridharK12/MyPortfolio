@@ -1,0 +1,12 @@
+workerPoolSpecs:
+  - machineSpec:
+      machineType: n1-standard-4
+    replicaCount: 1
+    pythonPackageSpec:
+      executorImageUri: us-docker.pkg.dev/vertex-ai/training/sklearn-cpu.1-6:latest
+      packageUris:
+        - gs://gcp-ml-project-sri-ml-artifacts/packages/train_diabetes.tar.gz
+      pythonModule: train_diabetes
+      args:
+        - --data_path=gs://gcp-ml-project-sri-ml-artifacts/data/diabetes.csv
+        - --model_dir=gs://gcp-ml-project-sri-ml-artifacts/models/diabetes
