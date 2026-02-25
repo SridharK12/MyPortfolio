@@ -1,0 +1,16 @@
+com\example\customerapi\exception\ErrorResponse.class
+com\example\customerapi\exception\BusinessException.class
+com\example\customerapi\security\GatewayAuthFilter.class
+com\example\customerapi\health\CustomerStatusServiceHealthIndicator.class
+com\example\customerapi\service\CustomerService.class
+com\example\customerapi\dto\CustomerStatusRequest.class
+com\example\customerapi\entity\Customer.class
+com\example\customerapi\exception\GlobalExceptionHandler.class
+com\example\customerapi\dto\CustomerStatusResponse.class
+com\example\customerapi\controller\CustomerController.class
+com\example\customerapi\filter\CorrelationIdFilter.class
+com\example\customerapi\mapper\CustomerMapper.class
+com\example\customerapi\CustomerApiApplication.class
+com\example\customerapi\config\Resilience4jConfig.class
+com\example\customerapi\dto\CustomerDetailsWithStatusResponse.class
+com\example\customerapi\repository\CustomerRepository.class

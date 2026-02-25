@@ -1,0 +1,755 @@
+2025-12-18T00:51:45.185+05:30  INFO 28056 --- [customer-api] [main] c.e.customerapi.CustomerApiApplication   : Starting CustomerApiApplication using Java 21.0.9 with PID 28056 (C:\Sridhar\Projects\customer-api\target\classes started by sridhar killampalli in C:\Sridhar\Projects\customer-api)
+2025-12-18T00:51:45.205+05:30 DEBUG 28056 --- [customer-api] [main] c.e.customerapi.CustomerApiApplication   : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-18T00:51:45.207+05:30  INFO 28056 --- [customer-api] [main] c.e.customerapi.CustomerApiApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-18T00:51:47.082+05:30  INFO 28056 --- [customer-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-18T00:51:47.368+05:30  INFO 28056 --- [customer-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 237 ms. Found 1 JPA repository interface.
+2025-12-18T00:51:47.979+05:30  INFO 28056 --- [customer-api] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9b47c5b8-1070-3c80-84fe-be3c57ae5d2c
+2025-12-18T00:51:48.972+05:30  INFO 28056 --- [customer-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2025-12-18T00:51:48.987+05:30  INFO 28056 --- [customer-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-18T00:51:48.989+05:30  INFO 28056 --- [customer-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-12-18T00:51:49.103+05:30  INFO 28056 --- [customer-api] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-18T00:51:49.104+05:30  INFO 28056 --- [customer-api] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3715 ms
+2025-12-18T00:51:49.631+05:30  INFO 28056 --- [customer-api] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-18T00:51:49.839+05:30  INFO 28056 --- [customer-api] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-18T00:51:49.930+05:30  INFO 28056 --- [customer-api] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-18T00:51:50.361+05:30  INFO 28056 --- [customer-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-18T00:51:50.405+05:30  INFO 28056 --- [customer-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-18T00:51:51.119+05:30  INFO 28056 --- [customer-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e7eba9f
+2025-12-18T00:51:51.122+05:30  INFO 28056 --- [customer-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-18T00:51:51.227+05:30  WARN 28056 --- [customer-api] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-18T00:51:52.632+05:30  INFO 28056 --- [customer-api] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-18T00:51:52.705+05:30  INFO 28056 --- [customer-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-18T00:51:53.199+05:30  WARN 28056 --- [customer-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-18T00:51:53.455+05:30 DEBUG 28056 --- [customer-api] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2025-12-18T00:51:53.647+05:30 DEBUG 28056 --- [customer-api] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-12-18T00:51:53.731+05:30 DEBUG 28056 --- [customer-api] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-18T00:51:53.796+05:30 DEBUG 28056 --- [customer-api] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-18T00:51:54.129+05:30  INFO 28056 --- [customer-api] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-12-18T00:51:54.289+05:30  WARN 28056 --- [customer-api] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-18T00:51:54.350+05:30  INFO 28056 --- [customer-api] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-18T00:51:54.391+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-18T00:51:54.399+05:30  INFO 28056 --- [customer-api] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-18T00:51:54.412+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:51:54.413+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:51:54.414+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:51:54.414+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:51:54.414+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:51:54.414+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:51:54.414+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:51:54.664+05:30 DEBUG 28056 --- [customer-api] [main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:51:54.845+05:30 DEBUG 28056 --- [customer-api] [main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:51:54.908+05:30 DEBUG 28056 --- [customer-api] [main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:51:54.918+05:30  WARN 28056 --- [customer-api] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:51:54.921+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:643)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:364)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:361)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:284)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:467)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:256)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:965)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.example.customerapi.CustomerApiApplication.main(CustomerApiApplication.java:13)
+
+2025-12-18T00:51:54.922+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2025-12-18T00:51:54.922+05:30  WARN 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2025-12-18T00:51:54.922+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2025-12-18T00:51:54.924+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-12-18T00:51:54.927+05:30  INFO 28056 --- [customer-api] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-12-18T00:51:54.934+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765999314929 with initial instances count: 0
+2025-12-18T00:51:54.941+05:30  INFO 28056 --- [customer-api] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CUSTOMER-API with eureka with status UP
+2025-12-18T00:51:54.944+05:30  INFO 28056 --- [customer-api] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765999314944, current=UP, previous=STARTING]
+2025-12-18T00:51:54.949+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:51:54.963+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:51:54.967+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:51:55.042+05:30  INFO 28056 --- [customer-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path ''
+2025-12-18T00:51:55.045+05:30  INFO 28056 --- [customer-api] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2025-12-18T00:51:55.077+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:51:55.090+05:30  INFO 28056 --- [customer-api] [main] c.e.customerapi.CustomerApiApplication   : Started CustomerApiApplication in 10.922 seconds (process running for 11.728)
+2025-12-18T00:51:55.139+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:51:55.140+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:52:24.932+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:52:24.933+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:52:24.933+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:52:24.934+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:52:24.935+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:52:24.935+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:52:24.935+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:52:24.936+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999314943
+2025-12-18T00:52:24.945+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:52:24.946+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:24.962+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:24.972+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:24.973+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:52:24.974+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:52:24.975+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:52:24.976+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:24.976+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:24.976+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:52:24.977+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:52:24.978+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:52:24.987+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:24.988+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:52:25.151+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:52:25.152+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:52:25.153+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:25.154+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:52:25.166+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:25.167+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:52:54.986+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:52:54.987+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:52:54.987+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:52:54.987+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:52:54.987+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:52:54.987+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:52:54.987+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:52:54.997+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999344974
+2025-12-18T00:52:54.997+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:55.007+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:52:55.024+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:55.026+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:52:55.027+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:52:55.027+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:52:55.029+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:55.029+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:52:55.029+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:55.045+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:55.045+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:55.048+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:52:55.048+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:52:55.048+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:52:55.175+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:52:55.177+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:52:55.177+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:52:55.177+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:52:55.193+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:52:55.193+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:53:25.061+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:53:25.061+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:53:25.061+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:53:25.061+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999375027
+2025-12-18T00:53:25.061+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:53:25.061+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:53:25.061+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:53:25.061+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:53:25.061+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:25.078+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:53:25.091+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:25.093+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:53:25.097+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:53:25.100+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:53:25.104+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:25.105+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:53:25.109+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:25.119+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:25.124+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:53:25.124+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:25.124+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:53:25.124+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:53:25.204+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:53:25.204+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:53:25.204+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:25.204+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:53:25.220+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:25.220+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:53:55.140+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:53:55.140+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999405096
+2025-12-18T00:53:55.142+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:53:55.142+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:53:55.142+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:53:55.142+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:53:55.142+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:53:55.142+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:53:55.142+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:55.153+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:53:55.159+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:55.162+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:53:55.163+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:53:55.163+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:53:55.165+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:55.165+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:53:55.169+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:55.178+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:55.178+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:53:55.187+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:55.187+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:53:55.189+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:53:55.238+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:53:55.238+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:53:55.241+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:53:55.241+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:53:55.255+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:53:55.257+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:54:25.183+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999435163
+2025-12-18T00:54:25.183+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:25.199+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:54:25.199+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:54:25.199+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:54:25.199+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:54:25.199+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:54:25.199+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:54:25.199+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:54:25.209+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:25.209+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:54:25.209+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:54:25.211+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:54:25.211+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:54:25.213+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:25.214+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:54:25.225+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:25.225+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:25.227+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:54:25.234+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:25.247+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:54:25.249+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:54:25.262+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:54:25.262+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:54:25.262+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:25.262+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:54:25.276+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:25.276+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:54:55.232+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999465211
+2025-12-18T00:54:55.232+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:55.258+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:55.259+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:54:55.259+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:54:55.259+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:54:55.261+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:55.261+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:54:55.264+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:54:55.266+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:54:55.266+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:54:55.266+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:54:55.266+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:54:55.266+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:54:55.266+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:54:55.273+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:55.273+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:54:55.273+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:54:55.278+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:54:55.278+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:54:55.280+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:55.282+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:54:55.292+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:54:55.296+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:55.296+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:54:55.307+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:54:55.307+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:54:55.307+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:55:25.281+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999495259
+2025-12-18T00:55:25.281+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:55:25.304+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:55:25.306+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:55:25.306+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:55:25.306+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:55:25.308+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:55:25.308+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:55:25.310+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:55:25.310+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:55:25.314+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:55:25.317+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:55:25.323+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:55:25.325+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:55:25.325+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:55:25.326+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:55:25.326+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:55:25.326+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:55:25.326+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:55:25.326+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:55:25.326+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:55:25.339+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:55:25.339+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:55:25.339+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:55:25.356+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:55:25.373+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:55:25.374+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:55:25.374+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:55:55.328+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999525306
+2025-12-18T00:55:55.331+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:55:55.347+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:55:55.356+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:55:55.356+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:55:55.356+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:55:55.356+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:55:55.360+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:55:55.372+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:55:55.372+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:55:55.376+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:55:55.376+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:55:55.376+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:55:55.376+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:55:55.376+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:55:55.376+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:55:55.376+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:55:55.381+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:55:55.397+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:55:55.407+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:55:55.415+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:55:55.415+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:56:25.350+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:56:25.351+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:56:25.352+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:25.352+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:56:25.374+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:25.374+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:56:25.384+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999555356
+2025-12-18T00:56:25.384+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:25.390+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:25.391+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:56:25.391+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:56:25.392+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:56:25.392+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:25.393+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:56:25.403+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:25.405+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:56:25.428+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:56:25.428+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:56:25.428+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:56:25.428+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:56:25.428+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:56:25.428+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:56:25.429+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:56:25.437+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:56:25.448+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:25.458+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:25.459+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:56:25.459+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:56:54.422+05:30  INFO 28056 --- [customer-api] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-18T00:56:55.383+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:56:55.385+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:56:55.388+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:55.391+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:56:55.409+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999585391
+2025-12-18T00:56:55.409+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:55.420+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:55.420+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:56:55.422+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:55.422+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:56:55.422+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:56:55.424+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:56:55.424+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:55.424+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:56:55.434+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:55.434+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:56:55.468+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:56:55.468+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:56:55.468+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:56:55.468+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:56:55.468+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:56:55.468+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:56:55.468+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:56:55.476+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:56:55.493+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:56:55.508+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:56:55.510+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:56:55.510+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:57:25.423+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:57:25.425+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:57:25.426+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:25.426+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:57:25.439+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999615422
+2025-12-18T00:57:25.440+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:25.446+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:25.447+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:57:25.460+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:25.461+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:57:25.461+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:57:25.461+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:57:25.462+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:25.462+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:57:25.470+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:25.471+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:57:25.516+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:57:25.517+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:57:25.517+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:57:25.517+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:57:25.517+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:57:25.517+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:57:25.517+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:57:25.524+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:57:25.538+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:25.554+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:25.585+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:57:25.585+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:57:55.467+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:57:55.467+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:57:55.467+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:55.471+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:57:55.482+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999645461
+2025-12-18T00:57:55.482+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:55.491+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:55.491+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:57:55.493+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:55.499+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:57:55.499+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:57:55.501+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:57:55.501+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:55.502+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:57:55.502+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:55.502+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:57:55.591+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:57:55.591+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:57:55.591+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:57:55.591+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:57:55.591+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:57:55.591+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:57:55.591+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:57:55.605+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:57:55.619+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:57:55.636+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:57:55.636+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:57:55.636+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:58:25.496+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:58:25.498+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:58:25.505+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:25.505+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:58:25.520+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:25.527+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:58:25.529+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999675499
+2025-12-18T00:58:25.560+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:25.568+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:25.568+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:58:25.568+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:58:25.568+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:58:25.568+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:25.568+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:58:25.577+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:25.583+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:58:25.656+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:58:25.656+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:58:25.656+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:58:25.656+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:58:25.656+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:58:25.656+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:58:25.656+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:58:25.656+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:58:25.671+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:25.687+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:25.687+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:58:25.687+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:58:55.537+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:58:55.539+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:58:55.540+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:55.540+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:58:55.558+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:55.558+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:58:55.595+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999705568
+2025-12-18T00:58:55.595+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:55.603+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:55.603+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:58:55.608+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:58:55.608+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:58:55.608+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:55.608+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:58:55.620+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:55.620+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:58:55.703+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:58:55.703+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:58:55.703+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:58:55.703+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:58:55.704+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:58:55.704+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:58:55.704+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:58:55.708+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:58:55.724+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:58:55.740+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:58:55.740+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:58:55.742+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-12-18T00:59:25.573+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:59:25.578+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:59:25.579+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:59:25.579+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:59:25.596+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:59:25.597+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:59:25.636+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-API/host.docker.internal:customer-api:8088?status=UP&lastDirtyTimestamp=1765999735608
+2025-12-18T00:59:25.636+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:59:25.644+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:59:25.644+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - Re-registering apps/CUSTOMER-API
+2025-12-18T00:59:25.644+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088: registering service...
+2025-12-18T00:59:25.645+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-API
+2025-12-18T00:59:25.646+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:59:25.646+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = host.docker.internal:customer-api:8088, appName = CUSTOMER-API, hostName = 127.0.0.1, status = UP, ipAddr = 127.0.0.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2c4e63b3] as "application/json"
+2025-12-18T00:59:25.656+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:59:25.657+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - registration status: 404
+2025-12-18T00:59:25.746+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-18T00:59:25.746+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-18T00:59:25.746+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-18T00:59:25.746+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-18T00:59:25.746+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-18T00:59:25.746+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-18T00:59:25.746+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-18T00:59:25.753+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-12-18T00:59:25.760+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-12-18T00:59:25.777+05:30 DEBUG 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-12-18T00:59:25.778+05:30  WARN 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 404; retrying on another server if available
+2025-12-18T00:59:25.778+05:30  INFO 28056 --- [customer-api] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-API/host.docker.internal:customer-api:8088 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
