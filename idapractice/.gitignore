@@ -1,0 +1,104 @@
+# ===========================
+# Java / Maven
+# ===========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.rar
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ===========================
+# Spring Boot
+# ===========================
+application-local.properties
+application-local.yml
+application-secret*.properties
+application-secret*.yml
+
+# ===========================
+# IDE - Eclipse
+# ===========================
+.classpath
+.project
+.settings/
+bin/
+
+# IDE - VS Code
+.vscode/
+
+# ===========================
+# Docker / Compose
+# ===========================
+docker-compose.override.yml
+
+# ===========================
+# ELK Stack (local volumes)
+# ===========================
+elasticsearch-data/
+logstash-data/
+kibana-data/
+elk-data/
+
+# ===========================
+# Kafka / Zookeeper (local volumes)
+# ===========================
+kafka-data/
+zookeeper-data/
+zookeeper-logs/
+
+# ===========================
+# MySQL (local volumes)
+# ===========================
+mysql-data/
+*.sql.bak
+
+# ===========================
+# React UI (generated/build artifacts)
+# ===========================
+ui/node_modules/
+ui/build/
+ui/dist/
+ui/.next/
+ui/.cache/
+ui/coverage/
+ui/.env.local
+ui/.env.development.local
+ui/.env.test.local
+ui/.env.production.local
+ui/npm-debug.log*
+ui/yarn-debug.log*
+ui/yarn-error.log*
+
+# ===========================
+# Logs
+# ===========================
+logs/
+*.log
+*.log.*
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===========================
+# Secrets / Credentials
+# ===========================
+*.env
+.env
+.env.*
+secrets/
+*.pem
+*.key
+*.p12
+*.jks
